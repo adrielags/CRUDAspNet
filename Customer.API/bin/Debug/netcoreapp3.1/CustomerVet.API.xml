@@ -1,0 +1,390 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CustomerVet.API</name>
+    </assembly>
+    <members>
+        <member name="T:CustomerVet.API.Controllers.ContactNumberController">
+            <summary>
+            Controller para contatos telefônicos
+            </summary>
+        </member>
+        <member name="F:CustomerVet.API.Controllers.ContactNumberController.repo">
+            <summary>
+            Interface para acesso ao banco
+            </summary>
+        </member>
+        <member name="M:CustomerVet.API.Controllers.ContactNumberController.#ctor(CustomerVet.API.Data.IRepository)">
+            <summary>
+            Construtor
+            </summary>
+            <param name="repo"></param>
+        </member>
+        <member name="M:CustomerVet.API.Controllers.ContactNumberController.Post(CustomerVet.API.Models.ContactNumber)">
+            <summary>
+            Adiciona novo contato
+            </summary>
+            <param name="contactNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomerVet.API.Controllers.ContactNumberController.Put(System.Int32,CustomerVet.API.Models.ContactNumber)">
+            <summary>
+            Put para novo contato
+            </summary>
+            <param name="id">id contato</param>
+            <param name="contactNumber">numero contato</param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomerVet.API.Controllers.ContactNumberController.Patch(System.Int32,CustomerVet.API.Models.ContactNumber)">
+            <summary>
+            Patch para contato
+            </summary>
+            <param name="id">id contato</param>
+            <param name="contactNumber">numero contato</param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomerVet.API.Controllers.ContactNumberController.Delete(System.Int32)">
+            <summary>
+            Deleta fcontato
+            </summary>
+            <param name="id">id contato</param>
+            <returns></returns>
+        </member>
+        <member name="T:CustomerVet.API.Controllers.CustomerController">
+            <summary>
+            Controlador para cliente
+            </summary>
+        </member>
+        <member name="F:CustomerVet.API.Controllers.CustomerController.repo">
+            <summary>
+            Interface para acesso ao banco 
+            </summary>
+        </member>
+        <member name="M:CustomerVet.API.Controllers.CustomerController.#ctor(CustomerVet.API.Data.IRepository)">
+            <summary>
+            Construtor
+            </summary>
+            <param name="repo"></param>
+        </member>
+        <member name="M:CustomerVet.API.Controllers.CustomerController.Get">
+            <summary>
+            Get todos os clientes
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CustomerVet.API.Controllers.CustomerController.Get(System.Int32)">
+            <summary>
+            Get por id de cliente
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomerVet.API.Controllers.CustomerController.GetBySearchInfo(System.String)">
+            <summary>
+            Procura cliente por parametro de pesquisa
+            </summary>
+            <param name="parametroPesquisa"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomerVet.API.Controllers.CustomerController.Post(CustomerVet.API.Models.Customer)">
+            <summary>
+            Adiciona novo cliente
+            </summary>
+            <param name="customer">Customer</param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomerVet.API.Controllers.CustomerController.Put(System.Int32,CustomerVet.API.Models.Customer)">
+            <summary>
+            Put para cliente
+            </summary>
+            <param name="id">id cliente</param>
+            <param name="customer">cliente</param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomerVet.API.Controllers.CustomerController.Patch(System.Int32,CustomerVet.API.Models.Customer)">
+            <summary>
+            Patch para cliente
+            </summary>
+            <param name="id">id cliente</param>
+            <param name="customer">cliente</param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomerVet.API.Controllers.CustomerController.Delete(System.Int32)">
+            <summary>
+            Delete para cliente
+            </summary>
+            <param name="id">id cliente</param>
+            <returns></returns>
+        </member>
+        <member name="T:CustomerVet.API.Data.IRepository">
+            <summary>
+            Interface do repositório
+            </summary>
+        </member>
+        <member name="M:CustomerVet.API.Data.IRepository.Add``1(``0)">
+            <summary>
+            Adicionar
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entity"></param>
+        </member>
+        <member name="M:CustomerVet.API.Data.IRepository.Update``1(``0)">
+            <summary>
+            Atualizar
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entity"></param>
+        </member>
+        <member name="M:CustomerVet.API.Data.IRepository.Delete``1(``0)">
+            <summary>
+            Remover
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entity"></param>
+        </member>
+        <member name="M:CustomerVet.API.Data.IRepository.SaveChanges">
+            <summary>
+            Salvar mudanças
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CustomerVet.API.Data.IRepository.GetAllCustomers(System.Boolean)">
+            <summary>
+            Recupera todos os clientes
+            </summary>
+            <param name="todosContatos"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomerVet.API.Data.IRepository.GetCustomerById(System.Int32,System.Boolean)">
+            <summary>
+            Recupera cliente por Id
+            </summary>
+            <param name="id"></param>
+            <param name="todosContatos"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomerVet.API.Data.IRepository.GetCustomerByDocument(System.String,System.Boolean)">
+            <summary>
+            Recupera cliente por documento
+            </summary>
+            <param name="document"></param>
+            <param name="todosContatos"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomerVet.API.Data.IRepository.IsDocumentUpdateValid(System.Int32,System.String)">
+            <summary>
+            Verifica se documento é valido
+            </summary>
+            <param name="id"></param>
+            <param name="document"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomerVet.API.Data.IRepository.IsNumeroCadastradoForCustomer(System.Int32,System.String)">
+            <summary>
+            Verifica se número já foi cadastrado para cliente
+            </summary>
+            <param name="idCustomer"></param>
+            <param name="numeroContato"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomerVet.API.Data.IRepository.GetContactById(System.Int32)">
+            <summary>
+            Recupera contato por id
+            </summary>
+            <param name="contactId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomerVet.API.Data.IRepository.SearchCustomer(System.String,System.Boolean)">
+            <summary>
+            Busca por cliente
+            </summary>
+            <param name="searchInput"></param>
+            <param name="todosContatos"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CustomerVet.API.Data.Repository">
+            <summary>
+            Repositório
+            </summary>
+        </member>
+        <member name="F:CustomerVet.API.Data.Repository.context">
+            <summary>
+            Contexto de acesso ao cliente no banco
+            </summary>
+        </member>
+        <member name="M:CustomerVet.API.Data.Repository.#ctor(CustomerVet.API.Data.CustomerContext)">
+            <summary>
+            Construtor
+            </summary>
+            <param name="context"></param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:CustomerVet.API.Data.Repository.Add``1(``0)" -->
+        <member name="M:CustomerVet.API.Data.Repository.Update``1(``0)">
+            <summary>
+            Atualizar
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entity"></param>
+        </member>
+        <member name="M:CustomerVet.API.Data.Repository.Delete``1(``0)">
+            <summary>
+            Remover
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entity"></param>
+        </member>
+        <member name="M:CustomerVet.API.Data.Repository.SaveChanges">
+            <summary>
+            Salvar mudanças
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CustomerVet.API.Data.Repository.GetAllCustomers(System.Boolean)">
+            <summary>
+            Recupera todos os clientes
+            </summary>
+            <param name="includeContatos"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomerVet.API.Data.Repository.GetCustomerById(System.Int32,System.Boolean)">
+            <summary>
+            Recupera cliente por Id
+            </summary>
+            <param name="customerId">id cliente</param>
+            <param name="includeContatos">incluir contatos</param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomerVet.API.Data.Repository.GetCustomerByDocument(System.String,System.Boolean)">
+            <summary>
+            Recupera cliente por documento
+            </summary>
+            <param name="document">numero documento</param>
+            <param name="includeContatos">true/false</param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomerVet.API.Data.Repository.SearchCustomer(System.String,System.Boolean)">
+            <summary>
+            Procura por cliente
+            </summary>
+            <param name="searchInput">entrada de busca</param>
+            <param name="includeContatos">true/false</param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomerVet.API.Data.Repository.GetContactById(System.Int32)">
+            <summary>
+            Recupera contato por id
+            </summary>
+            <param name="contactId">id contato</param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomerVet.API.Data.Repository.IsDocumentUpdateValid(System.Int32,System.String)">
+            <summary>
+            Verifica se documento é válido
+            </summary>
+            <param name="id">id </param>
+            <param name="document">numero documento</param>
+            <returns>true/false</returns>
+        </member>
+        <member name="M:CustomerVet.API.Data.Repository.IsNumeroCadastradoForCustomer(System.Int32,System.String)">
+            <summary>
+            Verifica se número de contato já está cadastrado para cliente
+            </summary>
+            <param name="idCustomer">idCliente</param>
+            <param name="numeroContato">numero do contato</param>
+            <returns>true/false</returns>
+        </member>
+        <member name="T:CustomerVet.API.Models.ContactNumber">
+            <summary>
+            Model numero contato
+            </summary>
+        </member>
+        <member name="M:CustomerVet.API.Models.ContactNumber.#ctor">
+            <summary>
+            Construtor
+            </summary>
+        </member>
+        <member name="M:CustomerVet.API.Models.ContactNumber.#ctor(System.Int32,System.Int32,System.String)">
+            <summary>
+            Construtor 
+            </summary>
+            <param name="id"></param>
+            <param name="customerId"></param>
+            <param name="telephoneNumber"></param>
+        </member>
+        <member name="P:CustomerVet.API.Models.ContactNumber.Id">
+            <summary>
+            Identificador
+            </summary>
+        </member>
+        <member name="P:CustomerVet.API.Models.ContactNumber.CustomerId">
+            <summary>
+            Id de cliente associado
+            </summary>
+        </member>
+        <member name="P:CustomerVet.API.Models.ContactNumber.Customer">
+            <summary>
+            Cliente associado ao contato
+            </summary>
+        </member>
+        <member name="P:CustomerVet.API.Models.ContactNumber.TelephoneNumber">
+            <summary>
+            Numero do telefone 
+            </summary>
+        </member>
+        <member name="T:CustomerVet.API.Models.Customer">
+            <summary>
+            Model do cliente 
+            </summary>
+        </member>
+        <member name="M:CustomerVet.API.Models.Customer.#ctor">
+            <summary>
+            Construtor
+            </summary>
+        </member>
+        <member name="M:CustomerVet.API.Models.Customer.#ctor(System.Int32,System.String,System.String,System.String,System.String)">
+            <summary>
+            Construtor
+            </summary>
+            <param name="id">Id</param>
+            <param name="nome">Nome</param>
+            <param name="document">Documento</param>
+            <param name="postalCode">CEP</param>
+            <param name="email">Email</param>
+        </member>
+        <member name="P:CustomerVet.API.Models.Customer.Id">
+            <summary>
+            Identificador
+            </summary>
+        </member>
+        <member name="P:CustomerVet.API.Models.Customer.Nome">
+            <summary>
+            Nome do cliente
+            </summary>
+        </member>
+        <member name="P:CustomerVet.API.Models.Customer.Document">
+            <summary>
+            Documento CEP OU CNPJ
+            </summary>
+        </member>
+        <member name="P:CustomerVet.API.Models.Customer.PostalCode">
+            <summary>
+            Código Postal
+            </summary>
+        </member>
+        <member name="P:CustomerVet.API.Models.Customer.Email">
+            <summary>
+            Email
+            </summary>
+        </member>
+        <member name="P:CustomerVet.API.Models.Customer.State">
+            <summary>
+            Estado ativo ou inativo
+            </summary>
+        </member>
+        <member name="P:CustomerVet.API.Models.Customer.ContactNumbers">
+            <summary>
+            Numeros de contato
+            </summary>
+        </member>
+    </members>
+</doc>
